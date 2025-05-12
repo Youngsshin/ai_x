@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>표태그1</title>
+    <style>
+        table{
+            background-color:#000;
+            color:#000;
+        }
+        caption{margin-bottom:5px;}
+        tr{ background-color:#fff;}
+        td{padding:5px 8px; width:120px; text-align:center;}
+
+    </style>
+</head>
+<body>
+    <table>
+        <caption>병합이 없는 기본 테이블</caption>
+        <tr>
+            <td>1행1열</td>
+            <td>1행2열</td>
+            <td>1행3열</td>
+            <td>1행4열</td>
+        </tr>
+        <tr>
+            <td>2행1열</td>
+            <td>2행2열</td>
+            <td>2행3열</td>
+            <td>2행4열</td>
+        </tr>
+        <tr>
+            <td>3행1열</td>
+            <td>3행2열</td>
+            <td>3행3열</td>
+            <td>3행4열</td>
+        </tr>
+    </table>
+
+    <table>
+        <caption>병합이 있는 기본 테이블</caption>
+        <tr>
+            <td rowspan="2">1행1열</td>
+            <td>1행2열</td>
+            <td>1행3열</td>
+            <td>1행4열</td>
+        </tr>
+        <tr>
+            <td colspan="2">2행 2, 3열</td>
+            <td>2행4열</td>
+        </tr>
+        <tr>
+            <td>3행1열</td>
+            <td colspan="3">3행 2, 3, 4열</td>
+        </tr>
+    </table>
+</body>
+</html>
