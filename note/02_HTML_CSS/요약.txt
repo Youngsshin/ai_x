@@ -6,8 +6,9 @@ ch02
 목록태그 : ul-li, ol-li(순서없는)
 표태그 : table(caption, tr, th/td)
 이미지태그 : img의 src속성, alt속성(이미지가 없을 경우 출력될 문자)
-오디오태그
+오디오태그 : audio
 
 ch03
-form태그
-공간분할태그
+form태그 : form - 다양한 type: text, passward, tel, number, file, date, hidden, submit, button ...
+block형 태그 vs lnline형 태그
+공간분할태그 : div, 시멘틱태그
