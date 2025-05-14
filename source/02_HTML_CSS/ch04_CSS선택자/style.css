@@ -1,0 +1,80 @@
+﻿/* 전체 레이아웃 잡기 */
+#header, #content, #footer{
+    width:1000px;
+    margin:0 auto;
+    overflow:hidden;
+}
+.left, .right{
+    float:left;
+    width:150px;
+    height:150px;
+    background-color:#ddd;
+    border:1px solid gray;
+}
+.center {
+    float:left;
+    width: 693px;
+    height: 150px;
+    background-color: #ddd;
+    border: 1px solid gray;
+}
+#content > div {
+    height:300px;
+}
+
+/* border-radius 뒹굴리기 */
+#header div:first-child,
+#footer div:last-child {
+    border-radius: 40px 0 40px 0;
+}
+#header div:last-child,
+#footer div:first-child{
+    border-radius:0 40px 0 40px;
+}
+#header .center{
+    border-radius:0 0 40px 40px;
+}
+#content .left{
+    border-radius:0 40px 40px 0;
+}
+#content .center{
+    border-radius:40px;
+}
+#content .right{
+    border-radius:40px 0 0 40px;
+}
+#footer .center{
+    border-radius:40px 40px 0 0;
+}
+
+/* #content .center 부분 */
+#content #nav ul {
+    overflow: hidden;
+    padding: 15px;
+    margin:0;
+}
+#content #nav ul li{
+    width:221px;
+    float:left;
+    font-size:28px;
+    font-weight:bold;
+    color:black;
+    list-style:none;
+    text-align:center;
+}
+#content #academy h1{
+    text-align:center;
+    margin:20px 0 35px;
+}
+#content #academy p{
+    padding:25px 20px;
+    font-size:1.1em;
+}
+
+/* #content .right 부분 */
+#content .right ol li{
+    font-size:15px;
+}
+#content .sel{
+    color:palevioletred;
+}

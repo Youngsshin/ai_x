@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>전체선택자</title>
+    <style>
+        *{ /* 전체선택자 == 페이지 전체 태그 : 페이지 초기화 용도 */
+            margin:0;
+            padding:0;
+            color:saddlebrown;
+        }
+        header, nav, section, footer{
+            width:800px; /* width를 지정하지 않으면 block형 태그는 부모 width를 따름 */
+            border:1px solid gray;
+            margin:2px auto;
+        }
+        nav ul{ /* 수평으로 하고 픈 태그의 부모 */
+            overflow:hidden; 
+        }
+        nav ul li{ /* 수평으로 할 태그 */
+            float:left;
+            list-style:none;
+            width:25%;
+            text-align:center;
+            margin:8px 0;
+        }
+        section{ /* 수평 속성을 지우고 싶은 태그 */
+            clear:both;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>oo주식회사</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>회사소개</li>
+            <li>서비스소개</li>
+            <li>고객센터</li>
+            <li>공지사항</li>
+        </ul>
+    </nav>
+    <section>
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+    </section>
+    <footer>
+        <p>서울시 ㅇㅇ구 ㅇㅇ로 99 무슨빌딩 901호</p>
+    </footer>
+</body>
+</html>
