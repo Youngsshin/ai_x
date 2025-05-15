@@ -1,0 +1,109 @@
+﻿*{
+    margin:0;
+    padding:0;
+}
+#wrap {
+    width: 979px;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid gray;
+    position:relative;
+}
+#wrap > div{
+    width:979px;
+}
+#wrap > div, .content, .banner{
+    border: 1px solid gray;
+}
+#wrap div > p{
+    font-size:20px;
+}
+#header, #nav, #section{
+    margin-bottom:5px;
+}
+#footer{
+    margin-bottom:0;
+}
+
+/*** header 부분 ***/
+#header{
+    background-color:yellow;
+}
+#header p{
+    text-align:center;
+    margin:50px;
+}
+
+/*** nav 부분 ***/
+#nav p{
+    text-align:center;
+    margin:0 0 10px 0;
+}
+#nav ul{
+    overflow:hidden;
+    padding-left:0;
+    width:800px;
+    margin:0 auto;
+}
+#nav ul li{
+    float:left;
+    list-style:none;
+    width:125px;
+    text-align:center;
+    background-color:pink;
+    padding:18px 15px;
+    margin-right:5px;
+}
+#nav ul li a{
+    text-decoration:none;
+    color:rebeccapurple;
+    font-weight:bold;
+}
+#nav ul li:first-child{
+    border-radius:25px 0 0 25px;
+}
+#nav ul li:last-child{
+    border-radius:0 25px 25px 0;
+}
+
+/*** section 부분 ***/
+#section{
+    padding:0px;
+    overflow:hidden;
+}
+#section .content{
+    float:left;
+    width:70%;
+    height:300px;
+    margin:10px;
+}
+#section .banner{
+    float:left;
+    width:25%;
+    height:300px;
+    margin:10px;
+}
+#section div > p{
+    text-align:center;
+    margin:10px;
+}
+
+/*** footer 부분 ***/
+#footer{
+    background-color:yellow;
+}
+#footer p{
+    text-align:center;
+    margin:50px;
+}
+
+/*** background ***/
+#image {
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    opacity: .3;
+    z-index: -999;
+}

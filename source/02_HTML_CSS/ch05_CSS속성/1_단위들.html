@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>단위</title>
+    <style>
+        #wrap{
+            width:600px;
+            margin:0 auto;
+            border:1px solid gray;
+            text-align:justify;
+            padding:10px;
+        }
+        #wrap p:nth-child(2n){
+            background-color:lightblue;
+        }
+        /* em(원 글씨크기의 몇배), %(글씨크기 및 width, height,...), px, pt(3pt가 4px)
+            pxtoem(https://pxtoem.com.au/)
+            pxtopt(https://pixelsconverter.com/px-to-pt)
+        */
+        #wrap p > span{
+            display:block; /* display 속성을 block으로 수정하면 block형 태그로 전환 */
+            color:gray;
+            font-size:.5em;
+        }
+        #wrap p:nth-child(1){
+            font-size:.8em; /* 원래 사이즈의 0.8배 */
+        }
+        #wrap p:nth-child(2){
+            font-size:100%; /* 문자의 경우 원래 사이즈의 몇 % */
+            /* width, height, padding, margin.. 등의 길이의 경우 : 부모길이의 몇 % */
+        }
+        #wrap p:nth-child(3){
+            font-size:32px; /* p태그 기본 사이즈가 16px */
+        }
+        #wrap p:nth-child(4){
+            font-size:24px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+            <span>입력 2025.05.04 오전 9:46</span>
+        </p>
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+            <span>입력 2025.05.04 오전 9:46</span>
+        </p>
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+            <span>입력 2025.05.04 오전 9:46</span>
+        </p>
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+            <span>입력 2025.05.04 오전 9:46</span>
+        </p>
+    </div>
+</body>
+</html>
