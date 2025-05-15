@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#container{
+    width: 1200px;
+    margin:0 auto;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* header gnb 부분 */
+.gnb{
+    background-color: black;
+}
+#header .gnb ul{
+    overflow: hidden;
+    width: 1000px;
+    margin: 0 auto;
+}
+#header .gnb ul li{
+    float: left;
+    width: 100px;
+    text-align: center;
+    line-height: 30px;
+}
+#header .gnb ul li a{
+    color: white;
+}
+
+/* logo 부분 */
+#header .logo{
+    padding: 30px 0;
+}
+#header .logo p{
+    font-size: 3em;
+    text-align: center;
+    line-height: 100px;
+    width: 180px;
+    height: 100px;
+    border: 1px solid gray;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+/* hitmenu 부분 */
+#header .hitmenu{
+    display: grid;
+    justify-content: end;
+    width: 1000px;
+    margin: 0 auto;
+}
+#header .hitmenu ul{
+    overflow: hidden;
+}
+#header .hitmenu ul li{
+    float: left;
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+#header .hitmenu ul li:first-child{
+    border-radius: 10px 0 0 10px;
+}
+#header .hitmenu ul li:last-child{
+    border-radius: 0 10px 10px 0;
+}
+
+/* lnb 부분 */
+#header .lnb{
+    width: 1200px;
+    border-top: 1px dashed black;
+    border-bottom: 1px dashed black;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+#header .lnb ul{
+    overflow: hidden;
+    width: 1000px;
+    margin: 0 auto;
+}
+#header .lnb ul li{
+    float: left;
+    width: 125px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+/* content section1 부분 */
+#content .section1{
+    overflow: hidden;
+    width: 1000px;
+    margin: 0 auto;
+}
+#content .section1 > div{
+    float: left;
+    border: 1px solid gray;
+    box-sizing: border-box;
+    height: 400px;
+}
+#content .section1 div > p{
+    text-align: center;
+    line-height: 400px;
+}
+#content .section1 .slide_banner{
+    width: 700px;
+}
+#content .section1 .side_banner{
+    width: 300px;
+}
+
+/* content section2 부분 */
+#content .section2{
+    width: 1000px;
+    margin: 0 auto;
+}
+#content .section2 > div{
+    overflow: hidden;
+    border: 1px solid gray;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+#content .section2 div > div{
+    float: left;
+    width: 240px;
+    height: 400px;
+    border: 1px solid gray;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 400px;
+    margin-left: 0.8%
+}
+
+/* footer 부분 */
+#footer{
+    overflow: hidden;
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+#footer div:not(.copyright){
+    float: left;
+    width: 33.3%;
+    height: 80px;
+    border: 1px solid gray;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+}
+#footer .copyright{
+    clear: both;
+    background-color: black;
+    width: 100%;
+    margin-top: 5px;
+}
+#footer .copyright p{
+    color: white;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
