@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        form{
+            border: 1px solid gray;
+            display: inline-block;
+            padding: 30px;
+        }
+        table td{
+            width: 90px;
+            font-size: 1.1em;
+        }
+        table td input{
+            height: 30px;
+            outline: none;
+        }
+        p{
+            display: grid;
+        }
+        p input{
+            width: 80px;
+            height: 40px;
+            line-height: 40px;
+            margin: 0 auto;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+    </style>
+    <script>
+        function chk(){
+            if(frm.num1.value != 20 && frm.num2.value != 30){
+                alert('다시 입력하세요');
+                frm.num1.focus();
+                return false;
+            }else{
+                alert('두번째 수가 '+(frm.num2.value-frm.num1.value)+'더 크다');
+                return false;
+            }
+            return true;
+            document.body.innerHTML ;
+        }
+    </script>
+</head>
+<body>
+    <form name="frm" onsubmit="return chk()">
+        <table>
+            <tr>
+                <td>첫번째수</td>
+                <td><input type="text" name="num1"></td>
+            </tr>
+            <tr>
+                <td>두번째수</td>
+                <td><input type="text" name="num2"></td>
+            </tr>
+        </table>
+        <p>
+            <input type="submit" value="결과">
+        </p>
+    </form>
+</body>
+</html>

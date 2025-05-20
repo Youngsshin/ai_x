@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        img{
+            width: 500px;
+        }
+    </style>
+    <script>
+        const hour = new Date().getHours(); // 0~23
+        // 0~6시 새벽그림 7~17시 낮그림 18~23시 밤그림
+        if(hour <= 6){
+            document.write('<h1>조용한 새벽입니다</h1>');
+            document.write('<img src="https://cdn.pixabay.com/photo/2020/02/20/18/58/dawn-4865539_640.jpg">');
+        }else if(7 <= hour && hour <= 17){
+            document.write('<h1>신나는 낮입니다</h1>');
+            document.write('<img src="https://media.istockphoto.com/id/1172479732/ko/%EB%B2%A1%ED%84%B0/%EA%B0%80%EC%9D%84-%ED%92%8D%EA%B2%BD-%EC%9C%84%EC%97%90-%EC%9D%BC%EC%B6%9C.jpg?s=612x612&w=0&k=20&c=v-L_tIRCukyiMcRb0Z9p9HPIaYXirUzCejeB4w4l4dM=">');
+        }else{
+            document.write('<h1>휴식이 필요한 밤입니다</h1>');
+            document.write('<img src="https://img.freepik.com/free-vector/night-forest_1308-69877.jpg?semt=ais_hybrid&w=740">');
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
