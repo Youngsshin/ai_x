@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        
+    </style>
+    <script>
+        const img = [
+            'url(ch05_img/img01.png)',
+            'url(ch05_img/img02.png)',
+            'url(ch05_img/img03.png)',
+        ]
+        let index = 0;
+        let id = setInterval(()=>{
+            document.write(new Date() + '<br>');
+            // document.body.style.backgroundImage = img[index%img.length];
+            document.body.style = 'background-image: '
+            index++;
+        }, 1000);
+        setTimeout(()=>{
+            clearInterval(id);
+            document.write('타이머 끝');
+        }, 10000);
+        document.write('초 지남');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
