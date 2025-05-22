@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #wrap{
+            width: 312px;
+            margin: 0 auto;
+        }
+        h4{
+            text-align: center;
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+        #calculator{
+            display: inline-block;
+            border: 1px solid gray;
+            padding: 15px;
+            border-radius: 15px;
+        }
+        #calculator p{
+            display: grid;
+            justify-content: center;
+            margin: 0px 0px 10px 0px;
+        }
+        #calculator p input{
+            width: 276px;
+            height: 54px;
+            border: 1px solid gray;
+            box-sizing: border-box;
+            padding: 0;
+            outline: none;
+        }
+        table td input{
+            width: 67px;
+            height: 42px;
+            font-size: 18px;
+            text-align: center;
+            border: 1px solid gray;
+            box-sizing: border-box;
+        }
+        table tr:nth-child(3) td:last-child input{
+            height: 134px;
+        }
+        table tr:last-child td:first-child input{
+            width: 138px;
+        }
+    </style>
+    <script>
+        function calClick(){
+            if("input[type='text']"){
+                
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h4>Calculator</h4>
+        <div id="calculator">
+            <form name="frm" onsubmit="return calClick()">
+                <p><input type="text"></p>
+                <table>
+                    <tr>
+                        <td><input type="button" name="btn" value="+"></td>
+                        <td><input type="button" name="btn" value="-"></td>
+                        <td><input type="button" name="btn" value="*"></td>
+                        <td><input type="button" name="btn" value="/"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" name="btn" value="7"></td>
+                        <td><input type="button" name="btn" value="8"></td>
+                        <td><input type="button" name="btn" value="9"></td>
+                        <td><input type="button" name="btn" value="C"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" name="btn" value="4"></td>
+                        <td><input type="button" name="btn" value="5"></td>
+                        <td><input type="button" name="btn" value="6"></td>
+                        <td rowspan="3"><input type="button" name="btn" value="="></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" name="btn" value="1"></td>
+                        <td><input type="button" name="btn" value="2"></td>
+                        <td><input type="button" name="btn" value="3"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="button" name="btn" value="0"></td>
+                        <td><input type="button" name="btn" value="."></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
