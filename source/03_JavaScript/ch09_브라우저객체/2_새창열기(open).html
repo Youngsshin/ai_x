@@ -14,7 +14,7 @@
          * 속성3 : 창의 옵션 width, height, left, top (창의 크기나 위치)
         */
         var child = open('', '', 'width=450, height=500');
-        if(child){
+        if(child){ // open()이 성공하면 child는 새로 연 창의 window 객체를 참조
             child.document.write('<h1>새창</h1>');
         }else{
             alert('팝업차단을 해제해 주세요');

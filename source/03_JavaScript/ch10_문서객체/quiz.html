@@ -9,31 +9,29 @@
     </style>
 
     <script>
-        // window.onload = () => {
-        // var tds = 엘리먼트들 가져오기
-        //     var td = document.getElementsByTagName('td');
-        //     // for문 이용하여 tds의 background-color 바꾸기
-        // };
-        const bgColorChange = () => {
+        var color = ['red', 'orange', 'yellow', 'green', 'blue', 'navy', 'violet', 'white'];
+        window.onload = () => {
+            // var tds = 엘리먼트들 가져오기
             var tds = document.getElementsByTagName('td');
-            var color = ['red', 'orange', 'yellow', 'green', 'blue', 'navy', 'black']
+            // for문 이용하여 tds의 background-color 바꾸기
             for(let idx=0; idx<tds.length; idx++){
                 tds[idx].style = 'background-color:' + color[idx];
             }
         };
+        const bgColorChange = n => document.body.style.backgroundColor = color[n];
     </script>
 </head>
 <body>
     <h3>quiz1 : 마우스를 올리면 바탕화면도 해당 색상으로</h3>
     <table>
-        <tr onmouseout="bgColorChange()"> <!-- tr에 마우스를 빼면 바탕화면이 하얀색으로 -->
-            <td onmouseover=""></td> <!-- td에 마우스를 올리면 td색상으로 -->
-            <td onmouseover=""></td>
-            <td onmouseover=""></td>
-            <td onmouseover=""></td>
-            <td onmouseover=""></td>
-            <td onmouseover=""></td>
-            <td onmouseover=""></td>
+        <tr onmouseout="bgColorChange(7)"> <!-- tr에 마우스를 빼면 바탕화면이 하얀색으로 -->
+            <td onmouseover="bgColorChange(0)"></td> <!-- td에 마우스를 올리면 td색상으로 -->
+            <td onmouseover="bgColorChange(1)"></td>
+            <td onmouseover="bgColorChange(2)"></td>
+            <td onmouseover="bgColorChange(3)"></td>
+            <td onmouseover="bgColorChange(4)"></td>
+            <td onmouseover="bgColorChange(5)"></td>
+            <td onmouseover="bgColorChange(6)"></td>
         </tr>
     </table>
 </body>
