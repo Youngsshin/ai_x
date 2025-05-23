@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        
+    </style>
+    <script src="datainterval.js"></script>
+    <script>
+        var now = new Date();
+        document.write(now + '<br>');
+        document.write(now.toLocaleString() + '<br>');
+        document.write(now.toLocaleDateString() + '<br>');
+        document.write(now.toLocaleTimeString() + '<br>');
+        var openday = new Date(2025, 3, 7, 9, 30, 0); // 월은 0부터 11, 1월은 0 (일은 적용 x)
+        document.write('개강일 : ' + openday.toLocaleString() + '<br>');
+        // 몇일 차이인지 계산하는 함수 
+        var day = now.getIntervalDay(openday);
+        day = openday.getIntervalDay(now); // getIntervalDay입장에선 openday가 this, now가 매개변수
+        document.write(day + '일 지났음');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
