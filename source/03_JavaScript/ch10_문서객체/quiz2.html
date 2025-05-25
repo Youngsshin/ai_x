@@ -6,12 +6,30 @@
     <title></title>
     <style>
         div{width:300px; margin:0 auto; border:1px solid blue; text-align:center;}
+        button{
+            margin-bottom: 20px;
+        }
     </style>
     <script>
-        
+        // var url = [
+        //     'url("http://www.naver.com")',
+        //     'url("http://www.daum.net")'
+        // ];
+        // const opendWin = function(){
+        //     var child = open('', 'childwin', '');
+        //     if(child){
+        //         alert('팝업 해제 요망');
+        //     }
+        // };
     </script>
 </head>
 <body>
-    
+    <div id="menu">
+        <h3>quiz2. 메뉴</h3>
+        <button onclick="window.open('http://www.naver.com', '_self', '')">네이버</button>
+        <button onclick="window.open('http://www.daum.net', '', '')">다음</button>
+        <button onclick="window.open('http://www.google.com', '', '')">구글</button>
+        <button onclick="window.open('http://www.youtube.com', '', '')">유튜브</button>
+    </div>
 </body>
 </html>
