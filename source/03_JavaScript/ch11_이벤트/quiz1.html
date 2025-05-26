@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <style>
+        table{width:500px; margin: 10px auto; background-color: darkgreen;}
+        td{background-color: white; padding: 50px; text-align: center;}
+    </style>
+    <script>
+        window.onkeyup = ()=>{
+            let tds = document.querySelectorAll('td');
+            let key = event.keyCode;
+            for(let i=0; i<tds.length; i++){
+                tds[i].style.backgroundColor = 'white';
+            }
+            if((48<=key)&&(key<=56)){
+                for(let i=0; i<tds.length; i++){
+                    if(Number(tds[i].innerHTML)==key-48){
+                        
+                    }
+                }
+            }else if((96<=key)&&(key<=105)){
+                tds[0].style.backgroundColor = 'red';
+            }
+        };
+    </script>
+</head>
+<body>
+    <table>
+        <tr><td>0</td><td>1</td><td>2</td></tr>
+        <tr><td>3</td><td>4</td><td>5</td></tr>
+        <tr><td>6</td><td>7</td><td>8</td></tr>
+    </table>
+</body>
+</html>
