@@ -10,17 +10,16 @@
         window.onkeyup = ()=>{
             let tds = document.querySelectorAll('td');
             let key = event.keyCode;
-            for(let i=0; i<tds.length; i++){
-                tds[i].style.backgroundColor = 'white';
-            }
             if((48<=key)&&(key<=56)){
                 for(let i=0; i<tds.length; i++){
-                    if(Number(tds[i].innerHTML)==key-48){
-                        
-                    }
+                    tds[i].style.backgroundColor = 'white';
                 }
+                tds[key-48].style.backgroundColor = 'yellow';
             }else if((96<=key)&&(key<=105)){
-                tds[0].style.backgroundColor = 'red';
+                for(let i=0; i<tds.length; i++){
+                    tds[i].style.backgroundColor = 'white';
+                }
+                tds[key-96].style.backgroundColor = 'red';
             }
         };
     </script>

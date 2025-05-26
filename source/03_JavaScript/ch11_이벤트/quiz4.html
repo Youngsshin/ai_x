@@ -11,25 +11,29 @@
         }
     </style>
     <script>
-        // var url = [
-        //     'url("http://www.naver.com")',
-        //     'url("http://www.daum.net")'
-        // ];
-        // const opendWin = function(){
-        //     var child = open('', 'childwin', '');
-        //     if(child){
-        //         alert('팝업 해제 요망');
-        //     }
-        // };
+        const url = [
+            'http://www.naver.com',
+            'http://www.daum.net',
+            'http://www.google.com',
+            'http://www.youtube.com'
+        ];
+        window.addEventListener('load', ()=>{
+            const btns = document.getElementsByTagName('button');
+            for(let idx=0; idx<btns.length; idx++){
+                btns[idx].addEventListener('click', ()=>{
+                    location.href = url[idx];
+                });
+            }
+        });
     </script>
 </head>
 <body>
-    <div id="menu">
+    <div>
         <h3>quiz4. 메뉴</h3>
-        <button onclick="window.open('http://www.naver.com', '_self', '')">네이버</button>
-        <button onclick="window.open('http://www.daum.net', '', '')">다음</button>
-        <button onclick="window.open('http://www.google.com', '', '')">구글</button>
-        <button onclick="window.open('http://www.youtube.com', '', '')">유튜브</button>
+        <button>네이버</button>
+        <button>다음</button>
+        <button>구글</button>
+        <button>유튜브</button>
     </div>
 </body>
 </html>
