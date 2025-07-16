@@ -34,3 +34,8 @@ def join():
 @app.route("/update/<name>/<id>/<pw>/<addr>", methods=["PATCH"])
 def update(name, id, pw, addr):
     return f"{name}님 정보가 수정되었습니다"
+
+@app.route("/delete/<id>", methods=["DELETE"])
+def delete(id):
+    # delete from 테이블명 where id = id를 DBMS에 전송하기
+    return f"id가 {id}인 정보를 삭제했습니다"
