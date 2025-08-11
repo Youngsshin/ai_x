@@ -1,5 +1,5 @@
 """
-URL configuration for ch03 project.
+URL configuration for myproject project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.2/topics/http/urls/
@@ -15,15 +15,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
-from student import views
+from django.urls import path
+from blog import views
 
-# "" -> student list 출력
-# "/student" -> student list 출력
-# "/student/get/2" -> id=2인 student 상세보기
-# "/student/del/2" -> id=2인 student 삭제하기
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", views.list),
-    path("student/", include("student.urls"))
 ]
