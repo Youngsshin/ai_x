@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib import messages # 예외 메세지 담는 역할
 from django.http import JsonResponse
 from .models import Post
 
@@ -9,6 +10,31 @@ def index(request):
         json_dumps_params={'ensure_ascii':False}
     )
 
-def list(requset):
+def list(request):
     post_list = Post.objects.all()
-    return render(requset, "blog/index.html", {"post_list":post_list})
+    return render(request, "blog/index.html", {"post_list":post_list})
+
+def detail(request, post_id:int):
+    # 방법 1
+    # post = Post.objects.get(pk=post_id)
+    # return render(request, "blog/detail.html", {"post":post})
+
+    # 방법 2
+    # post = get_object_or_404(Post, pk=post_id) # 404 상태 처리
+    # return render(request, "blog/detail.html", {"post":post})
+
+    # 방법 3
+    # post = Post.objects.filter(pk=post_id) # 조건에 맞는 데이터를 list로 받음
+    # if post:
+    #     return render(request, "blog/detail.html", {"post":post[0]})
+    # else:
+    #     messages.error(request, f"{post_id}번 글이 게시되지 않았습니다.")
+    #     return redirect("blog:index")
+
+    # 방법 4
+    try:
+        post = Post.objects.get(pk=post_id) 
+        return render(request, "blog/detail.html", {"post":post})
+    except post.DoesNotExist:
+        messages.error(request, f"{post_id}번 글이 게시되지 않았습니다.")
+        return redirect("blog:index")
