@@ -26,7 +26,7 @@ class Migration(migrations.Migration):
                         verbose_name="ID",
                     ),
                 ),
-                ("phone_number", models.CharField(max_length=20, verbose_name="전화번호")),
+                ("phone_number", models.CharField(max_length=20, verbose_name="전화")),
                 ("address", models.CharField(max_length=100, verbose_name="주소")),
                 (
                     "user",

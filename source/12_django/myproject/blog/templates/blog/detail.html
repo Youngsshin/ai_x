@@ -18,11 +18,11 @@
       </h6>
     {% endfor %}
     {% comment %} 태그 리스트 출력(태그 없을 경우 없음 출력) {% endcomment %}
-    {% for tag in post.tags.all %}
+    {% for tag in post.tags.all %}  
       #<b>{{tag.name}}</b>
-    {% empty %}
+    {% empty %}  
       <h6>등록된 태그가 없습니다</h6>
-    {% endfor %}
+    {% endfor%}
     <br>
   {% else %}
     <p>No post</p>

@@ -7,7 +7,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ("blog", "0002_post_url_alter_post_region"),
+        ("blog", "0002_post_url_alter_post_lnglat_alter_post_region_and_more"),
     ]
 
     operations = [

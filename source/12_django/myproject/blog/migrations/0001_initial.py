@@ -44,11 +44,10 @@ class Migration(migrations.Migration):
                     "lnglat",
                     models.CharField(
                         blank=True,
-                        help_text="경도, 위도 포맷으로 저장",
                         max_length=100,
                         null=True,
                         validators=[blog.models.lnglat_validator],
-                        verbose_name="경도, 위도",
+                        verbose_name="경,위도",
                     ),
                 ),
             ],

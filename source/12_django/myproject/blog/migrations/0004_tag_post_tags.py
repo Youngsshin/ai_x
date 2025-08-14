@@ -22,10 +22,7 @@ class Migration(migrations.Migration):
                         verbose_name="ID",
                     ),
                 ),
-                (
-                    "name",
-                    models.CharField(max_length=100, unique=True, verbose_name="태그명"),
-                ),
+                ("name", models.CharField(max_length=100, unique=True)),
             ],
         ),
         migrations.AddField(
