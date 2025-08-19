@@ -130,12 +130,21 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
-
+# 개발 환경
 STATIC_URL = "static/"
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'myproject', 'static'),
 ]
+# 운영 환경 python manage.py collectstatic 실행(pt.10에 나와있음)
+STATIC_ROOT = os.path.join(BASE_DIR, '_staticfiles')
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# https://github.com/django/django/blob/main/django/conf/global_settings.py
+# media 파일의 url prefix /media/article/noImg.png
+MEDIA_URL = "/media/"
+# 업로드한 파일이 저장될 폴더 -> 이미지 파일 지원 라이브러리 pip install pillow
+MEDIA_ROOT = os.path.join(BASE_DIR, "_media")
