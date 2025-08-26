@@ -33,7 +33,8 @@ SECRET_KEY = config('SECRET_KEY', 'secretkey')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# .env에 ALLOWED_HOSTS, domain.com 추가
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='').split(',')
 
 
 # Application definition
@@ -152,3 +153,13 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 MEDIA_URL = "/media/"
 # 업로드한 파일이 저장될 폴더 -> 이미지 파일 지원 라이브러리 pip install pillow
 MEDIA_ROOT = os.path.join(BASE_DIR, "_media")
+
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST ='smtp.gmail.com'
+EMAIL_PORT=465
+EMAIL_HOST_USER = config('GMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD=config('GMAIL_HOST_PASSWORD')
+EMAIL_USE_SSL=True
+# EMAIL_USE_TLS=False
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
