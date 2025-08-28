@@ -1,0 +1,62 @@
+딥러닝 기초 정리
+
+1절 환경설정
+
+가상환경 생성: conda create -n ml-dl-nlp python=3.9
+필수 라이브러리: tensorflow==2.10.0, numpy, pandas, matplotlib, scikit-learn
+Jupyter 커널 등록: python -m ipykernel install --user --name ml-dl-nlp
+
+2절 인공지능, 기계학습, 딥러닝
+
+인공지능 > 기계학습 > 딥러닝 관계
+기계학습: 데이터로부터 패턴을 학습하는 방법
+지도학습: 입력과 정답이 있는 학습 (회귀, 분류)
+비지도학습: 정답 없이 데이터의 구조 파악
+
+3절 텐서플로우 기본
+
+데이터 플로우 그래프: Node(연산)와 Edge(텐서)로 구성
+기본 연산: tf.constant(), tf.add(), tf.matmul()
+placeholder 사용해서 실행 시 값 전달
+Session으로 그래프 실행
+
+4절 선형 회귀 (Linear Regression)
+
+가설 함수: H(x) = Wx + b
+비용 함수: MSE (Mean Squared Error)
+경사하강법으로 W, b 최적화
+다변수 회귀: 행렬 연산 H(x) = XW + b
+
+5절 로지스틱 회귀 (Logistic Regression)
+
+이진 분류 문제 해결
+시그모이드 함수: f(x) = 1/(1+e^(-x))
+로그 손실 함수 사용
+다항 분류에는 소프트맥스 함수와 원-핫 인코딩
+
+6절 딥러닝 개념
+
+인공 뉴런: 입력 신호의 가중합 + 활성화 함수
+퍼셉트론: 단층으로는 XOR 문제 해결 불가
+다층 퍼셉트론(MLP): 은닉층을 통해 비선형 문제 해결
+활성화 함수: ReLU, Sigmoid, Softmax
+
+7절 텐서플로우 2.x 딥러닝 구현
+
+모델 구성: Dense 레이어로 완전연결층 구성
+컴파일: optimizer, loss, metrics 설정
+훈련: model.fit()으로 학습
+평가: model.evaluate()로 성능 측정
+
+8절 데이터셋 분할과 과적합
+
+훈련/검증/테스트 데이터 분할의 중요성
+과적합: 훈련 데이터에만 과도하게 최적화
+조기 종료(EarlyStopping)로 과적합 방지
+학습률 조정: 너무 크면 발산, 너무 작으면 수렴 느림
+
+9절 데이터 전처리
+
+표준화: (x-평균)/표준편차
+정규화: (x-최소값)/(최대값-최소값)
+원-핫 인코딩: 범주형 데이터를 이진 벡터로 변환

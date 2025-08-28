@@ -1,0 +1,21 @@
+브라우저 객체 모델 정리
+
+1절 window 객체
+- 브라우저 기반 자바스크립트의 최상위 객체
+- alert(), prompt() 함수도 모두 window 객체의 메서드
+- var 키워드로 선언한 일반 변수도 window 객체의 속성이 됨
+- 수많은 속성과 메서드를 가지고 있어 자주 사용되는 것만 학습
+
+2절 새로운 window 객체 생성
+- window.open() 메서드로 새 윈도우(팝업창) 생성
+- 매개변수 : URL, name, features (모두 옵션)
+- features로 윈도우 크기, 위치, 메뉴바 등 설정 가능
+- 팝업 차단 시 null 리턴되므로 예외 처리 필요
+- 새로운 윈도우 객체를 리턴하여 속성과 메서드 사용 가능
+
+3절 location 객체
+- 브라우저의 주소 표시줄과 관련된 객체
+- 주요 속성 : href, host, pathname, search 등
+- 페이지 이동 방법 4가지 : location, location.href, assign(), replace()
+- replace() 메서드는 뒤로 가기 버튼 사용 불가
+- history 객체와 함께 사용하여 페이지 이동 제어

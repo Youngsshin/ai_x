@@ -1,0 +1,93 @@
+CNN 딥러닝 정리
+
+1절. 실습 환경 설정
+선택 1: 아나콘다 설치
+
+Anaconda3-2023.03-1-Windows-x86_64.exe 다운로드
+Windows 10 GPU 사용: pip install tensorflow==2.10
+Windows 11: pip install tensorflow 또는 tensorflow-gpu
+
+선택 2: Google Colab
+
+Chrome에서 구글 계정 로그인
+구글 드라이브 → + 신규 → 더보기 → Google Colaboratory
+한글 그래프 적용: fonts-nanum 설치 및 캐시 초기화
+
+2절. 텐서플로우 케라스
+케라스 vs 파이토치
+
+케라스: 높은 수준 API, 직관적, TensorFlow 통합
+파이토치: 낮은 수준 API, 유연함, 연구 커뮤니티 선호
+
+주요 모듈
+
+tf.keras.Sequential: 순차 모델 구축
+tf.keras.layers: 다양한 층 정의 (Dense, Conv2D 등)
+tf.keras.losses: 손실 함수 (categorical_crossentropy 등)
+tf.keras.optimizers: 최적화 알고리즘 (Adam, SGD 등)
+
+모델 구축 방법
+
+Sequential API: 단순한 층 쌓기
+Functional API: 복잡한 모델 구조 (다중 입출력 등)
+
+3절. 합성곱 신경망 기초
+이미지 합성곱
+
+필터(커널)을 이미지에 적용하여 특징 추출
+필터 크기만큼 요소별 곱셈 후 합계 계산
+다양한 필터: Sobel, Prewitt, Sharpen, Blur 등
+
+풀링(Pooling)
+
+Max Pooling: 영역 내 최댓값 선택
+Average Pooling: 영역 내 평균값 계산
+차원 축소로 연산량 감소 및 특징 강화
+
+스트라이드와 제로 패딩
+
+스트라이드: 필터 이동 크기 (일반적으로 합성곱 1, 풀링은 풀 사이즈와 동일)
+제로 패딩: 바깥 화소 손실 방지, floor(filter_size/2)만큼 0 추가
+padding='same': 제로패딩 사용, padding='valid': 제로패딩 미사용
+
+4절. CNN 모델 구조
+전체 구조
+
+Feature Extraction: Convolution → Pooling 반복
+Classification: Fully Connected Layer로 분류
+
+Channel 구조
+
+TensorFlow: Channel Last (height, width, channel)
+PyTorch: Channel First (channel, height, width)
+
+5절. MNIST 손글씨 숫자 분류
+데이터셋
+
+28×28 크기 손글씨 숫자 이미지
+784개 픽셀값으로 표현
+60,000개 훈련 데이터, 10,000개 테스트 데이터
+
+원-핫 인코딩
+
+범주형 데이터를 이진 벡터로 변환
+각 클래스별로 하나만 1, 나머지는 0
+sparse_categorical_crossentropy 사용 시 불필요
+
+CNN 모델 구성
+python# 모델 구조
+Conv2D(32, (3,3), relu) → MaxPooling2D() → Dropout(0.1)
+Conv2D(64, (3,3), relu) → MaxPooling2D() → Dropout(0.25)
+Flatten() → Dense(128, relu) → Dropout(0.5) → Dense(10, softmax)
+
+# 컴파일 및 훈련
+model.compile(loss='sparse_categorical_crossentropy', 
+             optimizer='adam', metrics=['accuracy'])
+model.fit(X_train, y_train, batch_size=128, epochs=10)
+핵심 하이퍼파라미터
+
+손실함수: sparse_categorical_crossentropy
+옵티마이저: Adam
+배치 크기: 128
+학습 횟수: 10회
+드롭아웃: 0.1, 0.25, 0.5 단계적 적용

@@ -1,0 +1,44 @@
+CSS3 규칙과 반응형 웹 정리
+
+1절 CSS 파일 분리
+- CSS 분리 : HTML과 CSS를 별도 파일로 관리
+- link 태그 활용 : <link rel="stylesheet" href="파일명.css">
+- 유지보수성 향상 및 코드 재사용 가능
+
+2절 @import 규칙
+- '@' 시작 키워드 : CSS3의 규칙(@import, @media, @keyframe 등)
+- @import url('파일명.css') : CSS 내부에서 다른 CSS 불러오기
+- 제약사항 : <style> 태그 내부 상단에만 위치 가능
+- link 태그의 대안 역할
+
+3절 @media 규칙
+- 미디어 쿼리 : 상황에 따른 다른 CSS 적용
+- 미디어 타입 : all(모든미디어), print(인쇄용), screen(화면용)
+- link 태그에 media 속성으로 지정 가능
+- CSS 내부에서 @media 블록으로도 사용 가능
+
+4절 반응형 웹 개념
+- 다양한 디바이스 : PC, 스마트폰, 태블릿 등 화면 크기가 다름
+- 반응형 설계 : 디바이스에 따라 최적화된 레이아웃 제공
+- Viewport 설정 : width=device-width, initial-scale=1.0
+- 유연한 레이아웃 : 고정폭에서 유동폭으로 변경
+
+5절 반응형 구간 설정
+- 모바일 : ~959px (max-device-width:959px)
+  * 너비 100%, 마지막 메뉴 숨김, 메뉴 25% 배치
+- 태블릿 : 960px~1200px (min-device-width:960px and max-device-width:1201px)
+  * 너비 100%, 투명도 0.8, 메뉴 20% 배치
+- 데스크톱 : 1201px~ (min-device-width:1201px)
+  * 고정폭 800px, 메뉴 20% 배치
+
+6절 미디어 쿼리 문법
+- 기본 문법 : @media 미디어타입 and (조건) { CSS 규칙 }
+- 최대폭 : max-device-width (지정된 값 이하)
+- 최소폭 : min-device-width (지정된 값 이상)
+- 범위 지정 : and 연산자로 최소값과 최대값 동시 지정
+
+7절 반응형 설계 원칙
+- 모바일 퍼스트 : 작은 화면부터 설계하여 확장
+- 유연한 그리드 : 고정 픽셀 대신 퍼센트 사용
+- 적응형 이미지 : 화면 크기에 맞는 이미지 제공
+- 터치 친화적 UI : 모바일 환경 고려한 인터페이스

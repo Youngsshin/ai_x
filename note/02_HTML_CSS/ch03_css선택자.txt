@@ -1,0 +1,63 @@
+CSS 선택자와 속성 정리
+
+1절 기본 선택자
+- 태그 선택자 : h1, p, li 등 특정 태그 선택
+- 전체 선택자(*) : 모든 요소 선택, 페이지 초기화용
+- ID 선택자(#) : 고유한 요소 하나만 선택
+- Class 선택자(.) : 같은 클래스 가진 여러 요소 선택
+
+2절 복합 선택자
+- 후손 선택자(공백) : div p (div 안의 모든 p태그)
+- 자손 선택자(>) : div > p (div의 직접 자식 p태그만)
+- 동위 선택자 : h3 + div(바로 다음 형제), h3 ~ div(모든 형제)
+- 혼합 선택자 : ol .menu1, li.menu2 등
+
+3절 속성 선택자
+- [속성] : 특정 속성을 가진 요소
+- [속성=값] : 속성값이 일치하는 요소
+- [속성^=값] : 속성값이 특정 문자로 시작
+- [속성$=값] : 속성값이 특정 문자로 끝남
+
+4절 상태/반응 선택자
+- :hover : 마우스 올렸을 때
+- :focus : 포커스 받았을 때
+- :enabled, :disabled : 활성화/비활성화 상태
+- :after, :before : 가상 요소 생성
+
+5절 구조 선택자
+- :first-child, :last-child : 첫번째/마지막 자식
+- :nth-child(2n+1) : 홀수번째 자식
+- :nth-child(2n) : 짝수번째 자식
+- :not(.class) : 특정 클래스 제외
+
+6절 CSS3 단위
+- px : 절대 단위 (픽셀)
+- em : 상대 단위 (부모 요소 기준)
+- % : 상대 단위 (부모 요소 기준)
+- pt : 인쇄 단위
+
+7절 Display 속성
+- block : 개행 포함, 너비/높이 설정 가능
+- inline : 개행 없음, 너비/높이 설정 불가
+- inline-block : 너비/높이 가능 + 개행 없음
+- none : 요소 숨김 (공간도 사라짐)
+- visibility:hidden : 공간은 차지하지만 보이지 않음
+
+8절 박스 모델
+- Margin : 외부 여백 (요소 밖 공간)
+- Padding : 내부 여백 (요소 내부 공간)
+- Box-sizing : content-box(기본), border-box(전체크기 포함)
+- Opacity : 투명도 (0.0~1.0)
+
+9절 Position 속성
+- static : 기본값, 일반적인 문서 흐름
+- absolute : 절대 위치 (브라우저 기준)
+- relative : 상대 위치 (원래 위치 기준)
+- fixed : 고정 위치 (스크롤해도 고정)
+
+10절 Float와 글자 속성
+- Float : left/right 떠오르기, clear:both 해제
+- Font-family : 글꼴 지정
+- Font-size, font-weight, font-style : 크기, 굵기, 스타일
+- Text-align, text-decoration : 정렬, 장식
+- Line-height : 행간격, 세로 가운데 정렬 활용

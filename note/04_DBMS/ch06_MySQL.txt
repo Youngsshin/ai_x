@@ -1,0 +1,41 @@
+# MySQL 정리
+
+1절 MySQL의 특징
+- SQL 기반의 관계형 DBMS 중 하나
+- Oracle, Informix 등과 달리 무료(배포판) 사용 가능
+- 리눅스, 유닉스, 윈도우 등 거의 모든 운영체제에서 사용 가능
+- 처리 속도가 빠르고 대용량 데이터 처리 용이
+- 설치가 쉽고 초보자도 익히기 쉬움, 보안성 우수
+
+2절 MySQL 설치 및 시작
+- MySQL Installer Community 8.0.39 msi 버전 사용
+- Full 설치로 MySQL Workbench까지 함께 설치
+- 명령행에서 mysql -uroot -p로 접속
+- 8.x 버전에서는 인증방식 전환 필요 (mysql_native_password)
+
+3절 사용자 계정 관리
+- 계정 생성: CREATE USER user01 IDENTIFIED BY 'password'
+- 권한 부여: GRANT ALL PRIVILEGES ON *.* TO user01
+- 권한 박탈: REVOKE ALL ON *.* FROM user01
+- 계정 삭제: DROP USER user01
+- FLUSH PRIVILEGES로 권한 변경사항 반영
+
+4절 데이터베이스 관리
+- 데이터베이스 목록: SHOW DATABASES
+- 데이터베이스 생성: CREATE DATABASE 데이터베이스명
+- 데이터베이스 삭제: DROP DATABASE 데이터베이스명
+- 데이터베이스 선택: USE 데이터베이스명
+- 현재 데이터베이스 확인: SELECT DATABASE()
+
+5절 DDL (Data Definition Language)
+- 주요 자료형: TINYINT, SMALLINT, INT, NUMERIC(m,d), DOUBLE, CHAR, VARCHAR, BLOB, DATE, DATETIME, TIMESTAMP
+- 제약조건: UNIQUE, PRIMARY KEY, NOT NULL, FOREIGN KEY, CHECK, DEFAULT
+- AUTO_INCREMENT: 자동 증가 속성 (INT 타입만 가능)
+- 테이블 변경: ALTER TABLE로 필드 추가/수정/삭제
+
+6절 DML (Data Manipulation Language)
+- 연결연산자: CONCAT() 함수 사용 (||는 OR 연산자)
+- 날짜 함수: YEAR(), MONTH(), MONTHNAME(), DAYNAME(), DATE_FORMAT()
+- 논리 함수: IF(조건, true값, false값)
+- NULL 처리: IFNULL() 함수 (Oracle의 NVL 역할)
+- JOIN: INNER JOIN, LEFT OUTER JOIN, RIGHT OUTER JOIN 지원
